@@ -1,0 +1,263 @@
+header {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for images */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation for nav links */
+@keyframes linkHover {
+    from {
+        background-color: #222;
+        color: #00aaff;
+    }
+    to {
+        background-color: #00aaff;
+        color: black;
+    }
+}
+
+/* Animation for section scroll effect */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+/* Delay for each section */
+#home {
+    animation-delay: 0.5s;
+}
+#about {
+    animation-delay: 1s;
+}
+#services {
+    animation-delay: 1.5s;
+}
+#contact {
+    animation-delay: 2s;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Warna gelap */
+    color: #00aaff; 
+}
+
+header {
+    background-color: #111;
+    color: #00aaff;
+    padding: 20px 0;
+    text-align: center;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+    border-bottom: 2px solid #00aaff;
+}
+
+nav {
+    background-color: #222;
+    overflow: hidden;
+    border-bottom: 2px solid #00aaff;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #00aaff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-shadow: 0 0 10px #00aaff;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #00aaff;
+    color: black;
+    text-shadow: none;
+    animation: linkHover 0.3s ease-in-out;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #00aaff;
+    box-shadow: 0 0 10px #00aaff;
+}
+
+footer {
+    background-color: #222;
+    color: #00aaff;
+    text-align: center;
+    padding: 20px 0;
+    text-shadow: 0 0 10px #00aaff;
+    border-top: 2px solid #00aaff;
+}
+
+#home {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#about {
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#services {
+    background-color: #1c1c1c;
+}
+
+#contact {
+    background-color: #1d1d1d;
+}
+
+/* Styling for images with animation */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #00aaff;
+    animation: zoomIn 1s ease forwards;
+}
+
+.image-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Styling for logos */
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease forwards;
+}
+#services {
+text-align: center;
+padding: 50px 0;
+color: #00aaff;
+}
+#services h1 {
+margin-bottom: 40px;
+font-size: x-large;
+}
+.services-items {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 80px;
+}
+.service-item {
+background-color: #100e0e;
+border-radius: 10px;
+overflow: hidden;
+width: 200px;
+text-align: center;
+box-shadow: 0 0 10px #00aaff;
+}
+.service-item img {
+width: 100%;
+height: 150px;
+object-fit: cover;
+}
+.service-item h2 {
+margin: 10px 0;
+}
+.service-item p {
+margin: 10px;
+}
+.service-item:hover {
+transform: scale(1.1);
+transition: transform 0.3s ease;
+}
+#contact {
+text-align: center;
+padding: 50px 0;
+color: #00aaff;
+}
+header h1 {
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Definisikan animasi heartbeat */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* ukuran normal */
+    }
+    10% {
+        transform: scale(1.1); /* sedikit lebih besar */
+    }
+    20% {
+        transform: scale(1); /* kembali ke ukuran normal */
+    }
+    30% {
+        transform: scale(1.15); /* sedikit lebih besar lagi */
+    }
+    40% {
+        transform: scale(1); /* kembali ke ukuran normal */
+    }
+}
+/* Animasi muncul-hilang untuk gambar */
+.fade-in-out {
+    animation: fadeInOut 7s infinite; /* Durasi 2 detik dan infinite */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Transparan pada awal */
+    }
+    50% {
+        opacity: 1; /* Sepenuhnya terlihat */
+    }
+    100% {
+        opacity: 0; /* Kembali transparan */
+    }
+}
+/* Animasi menghilang dari kiri ke kanan */
+
